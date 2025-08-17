@@ -1,3 +1,42 @@
+.email-icon {
+    position: absolute;
+    left: 6px;
+    z-index: 2;
+    pointer-events: none;
+    width: 28px;
+    height: 28px;
+}
+
+.input-icon-wrapper input[type="email"] {
+    flex: 1 1 0%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 38px;
+    text-align: center;
+}
+/* Input con icono de WhatsApp */
+
+.input-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.whatsapp-icon {
+    position: absolute;
+    left: 10px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.input-icon-wrapper input[type="tel"] {
+    flex: 1 1 0%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 38px;
+    text-align: center;
+}
 body {
     min-height: 100vh;
     display: flex;
@@ -5,18 +44,19 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background: #f9f6ef;
+    background-color: #22304a;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 h1 {
     margin-bottom: 24px;
-    color: #333;
+    color: #fff;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 400;
 }
 
 form {
-    background: #fff;
+    background: #f3e9e3;
     padding: 32px 24px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -41,29 +81,45 @@ input[type="tel"] {
     border-radius: 4px;
     font-size: 1em;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 button {
     padding: 10px 18px;
-    border: none;
-    border-radius: 4px;
+    border: 2.5px solid #fff;
+    border-radius: 18px;
     background: #007bff;
     color: #fff;
     font-size: 1em;
     cursor: pointer;
     margin-right: 8px;
-    transition: background 0.2s;
+    transition: background 0.2s, box-shadow 0.1s, transform 0.1s;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
 button[type="reset"] {
-    background: #6c757d;
+    background: #90caf9; /* Azul claro lavado Material Design */
+    color: #22577a;
+    font-weight: 500;
 }
 
 button[type="button"] {
-    background: #dc3545;
+    background: #b3e5fc; /* Azul aún más lavado */
+    color: #22577a;
+    font-weight: 500;
 }
 
 button:hover {
-    opacity: 0.9;
+    opacity: 1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.16);
+    filter: brightness(1.15);
+    transform: scale(1.04);
+}
+
+button:active {
+    opacity: 1;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+    filter: brightness(0.96);
+    transform: scale(0.97);
 }
